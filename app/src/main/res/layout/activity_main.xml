@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/numbre_of_units"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/number_of_units"
+        android:autofillHints="0"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/convert_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/convert_unit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numbre_of_units" />
+
+    <RadioGroup
+        android:id="@+id/units_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/option_once"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/convert_unit">
+
+        <RadioButton
+            android:id="@+id/option_once"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/once_option"/>
+
+        <RadioButton
+            android:id="@+id/option_ml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ml_option" />
+
+        <RadioButton
+            android:id="@+id/option_gram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gram_option" />
+
+        <RadioButton
+            android:id="@+id/option_cup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cup_option" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/to_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/units_options" />
+
+
+    <RadioGroup
+        android:id="@+id/to_units_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/option_ml"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/to_text">
+
+        <RadioButton
+            android:id="@+id/option_to_once"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/once_option"/>
+
+        <RadioButton
+            android:id="@+id/option_to_ml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ml_option" />
+
+        <RadioButton
+            android:id="@+id/option_to_gram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gram_option" />
+
+        <RadioButton
+            android:id="@+id/option_to_cup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cup_option" />
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/round_up_switch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/round_up_result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/to_units_options"
+        app:layout_constraintTop_toBottomOf="@id/to_units_options" />
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/round_up_switch" />
+
+    <TextView
+        android:id="@+id/unit_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unit_result"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculate_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>

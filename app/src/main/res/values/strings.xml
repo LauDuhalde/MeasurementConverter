@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Measurement Converter</string>
+    <string name="number_of_units">Number of units</string>
+    <string name="convert_unit">What do you want to convert?</string>
+    <string name="once_option">Ounce</string>
+    <string name="ml_option">Milliliter</string>
+    <string name="gram_option">Gram</string>
+    <string name="cup_option">Cup</string>
+    <string name="round_up_result">Round up result?</string>
+    <string name="to_text">To:</string>
+    <string name="calculate">Calculate</string>
+    <string name="unit_result">Result</string>
+</resources>
